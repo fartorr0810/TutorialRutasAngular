@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "04748125-b980-4279-8441-848819ff9239"
+    "analytics": "fc9f3c85-da9a-4dfd-beaa-bc8e85e8293b"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "TutorialRutasAngular": {
+    "servers": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/TutorialRutasAngular",
+            "outputPath": "dist/servers",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "TutorialRutasAngular:build:production"
+              "browserTarget": "servers:build:production"
             },
             "development": {
-              "browserTarget": "TutorialRutasAngular:build:development"
+              "browserTarget": "servers:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "TutorialRutasAngular:build"
+            "browserTarget": "servers:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "TutorialRutasAngular"
+  "defaultProject": "servers"
 }
